@@ -99,6 +99,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	// dwm-actualfullscreen-20191112-cb3f58a.diff
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 };
 
 /* button definitions */

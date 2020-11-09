@@ -274,6 +274,9 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 
+// dwm-actualfullscreen-20191112-cb3f58a.diff
+static void togglefullscr(const Arg *arg);
+
 /* variables */
 static Systray *systray =  NULL;
 static const char broken[] = "broken";
@@ -1928,6 +1931,13 @@ tagmon(const Arg *arg)
 	if (!selmon->sel || !mons->next)
 		return;
 	sendmon(selmon->sel, dirtomon(arg->i));
+}
+
+void
+togglefullscr(const Arg *arg)
+{
+  if(selmon->sel)
+    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
 }
 
 void
