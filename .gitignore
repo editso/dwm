@@ -1,4 +1,4 @@
 **/*.o
-st
-dmenu
-dwm
+tools/dmenu-5.0/dmenu
+tools/dmenu-5.0/stest
+tools/st/st
